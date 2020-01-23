@@ -61,6 +61,10 @@ public class World {
                         //arvores claras
                         tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_LIGHT_TREE);
 
+                    }else if(pixelAtual == 0xFF282828) {
+                        //pedra
+                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_ROCK);
+
                     }else if(pixelAtual == 0xFF1407FF) {
                         //Player
                         tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FLOOR_1);

@@ -16,6 +16,7 @@ public class Tile {
     public static BufferedImage TILE_LEFT_WALL = Main.spriteSheet.getSprite(0, 32, 16, 16);
     public static BufferedImage TILE_DARK_WOODS = Main.spriteSheet.getSprite(16, 16, 16, 16);
     public static BufferedImage TILE_LIGHT_TREE = Main.spriteSheet.getSprite(0, 16, 16, 16);
+    public static BufferedImage TILE_ROCK = Main.spriteSheet.getSprite(32, 48, 16, 16);
 
     private BufferedImage sprite;
     private int x,y;

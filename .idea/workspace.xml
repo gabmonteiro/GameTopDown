@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33fbb1dd-b461-4e0e-93c1-6cc2cb811070" name="Default Changelist" comment="" />
+    <list default="true" id="33fbb1dd-b461-4e0e-93c1-6cc2cb811070" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/SpriteSheet/SpriteSheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/SpriteSheet/SpriteSheet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/FloorTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/FloorTile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/FrontWallTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/LeftWallTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/RightWallTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/WallTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/WallTile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/com/teste/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/com/teste/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/SpriteSheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/SpriteSheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/TileMap.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/TileMap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/FrontWallTile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/LeftWallTile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/RightWallTile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/teste/main/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +37,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WCwwNXo7ZYTT89sqrwSG4rMyWo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,6 +50,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Game_01" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -74,6 +104,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1579055605886" />
+    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579735001263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579735001263" />
     <state x="603" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1578928860882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -86,26 +120,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579108379777" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1579369387029">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1579735043723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579369387029" />
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1579573206808">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579735043723" />
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1579797408634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579573206808" />
-    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1579573206808">
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579797408634" />
+    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1579797408634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579573206808" />
-    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1579573206808">
+    <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579797408634" />
+    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1579797408634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579573206808" />
-    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1579573206808">
+    <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579797408634" />
+    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1579797408634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579573206808" />
+    <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579797408634" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1579370163691">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -122,10 +156,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579370163691" />
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1579570554309">
+    <state x="440" y="93" key="SettingsEditor" timestamp="1579795906946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579570554309" />
+    <state x="440" y="93" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579795906946" />
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1579795936993">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579795936993" />
     <state x="342" y="139" key="new project wizard" timestamp="1578667171068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

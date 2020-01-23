@@ -74,10 +74,10 @@ public class Player extends Entity {
 
     public void tick() {
         moved = false;
+        if(up) moveCima();
         if(down) moveBaixo();
     if(left) moveEsquerda();
     if(right) moveDireita();
-        if(up) moveCima();
 
 
         if(moved) {
