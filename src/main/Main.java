@@ -27,9 +27,9 @@ public class Main extends Canvas implements Runnable, KeyListener {
 
     private BufferedImage image;
 
-    public List<Entity> entities;
+    public static List<Entity> entities;
     public static SpriteSheet spriteSheet;
-    private Player player;
+    public static Player player;
 
     public static World world;
 
@@ -41,9 +41,9 @@ public class Main extends Canvas implements Runnable, KeyListener {
         image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         entities = new ArrayList<Entity>();
         spriteSheet = new SpriteSheet("/SpriteSheet.png");
-        world = new World("/TileMap.png");
         player = new Player(0, 0, 16, 16,spriteSheet.getSprite(48, 0,16,16));
         entities.add(player);
+        world = new World("/TileMap.png");
     }
 
     public void initFrame() {

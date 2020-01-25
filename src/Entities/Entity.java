@@ -1,9 +1,15 @@
 package Entities;
 
+import com.teste.main.Main;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Entity {
+
+    public static BufferedImage LIFE_EN = Main.spriteSheet.getSprite(112, 0, 16, 16);
+    public static BufferedImage AMMO_EN = Main.spriteSheet.getSprite(128, 0, 16, 16);
+    public static BufferedImage ENEMY_EN = Main.spriteSheet.getSprite(144, 0, 16, 16);
 
     private double x;
     private double y;

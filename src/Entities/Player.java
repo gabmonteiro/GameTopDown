@@ -9,7 +9,7 @@ public class Player extends Entity {
 
     public boolean left,right,up,down;
     private int direcaoRight = 0,direcaoLeft = 1,direcaoUp = 2, direcaoDown =  3;
-    private int direcao = direcaoRight;
+    private int direcao = direcaoUp;
     public double speed = 2.0;
 
     private int frames = 0, maxFrames = 5, index = 0, maxIndex = 4;

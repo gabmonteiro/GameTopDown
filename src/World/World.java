@@ -1,5 +1,10 @@
 package World;
 
+import Entities.Ammo;
+import Entities.Enemy;
+import Entities.Entity;
+import com.teste.main.Main;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -25,6 +30,7 @@ public class World {
                 for(int yy = 0; yy < map.getHeight(); yy++) {
                     int pixelAtual = pixels[xx + (yy * map.getWidth())];
 
+                    tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FLOOR_1);
                     if(pixelAtual == 0xFF000000) {
                         // chão
                         tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FLOOR_1);
@@ -65,16 +71,29 @@ public class World {
                         //pedra
                         tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_ROCK);
 
-                    }else if(pixelAtual == 0xFF1407FF) {
+                    }else if(pixelAtual == 0xFFA80086) {
+                        //Caminho de terra
+                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_DIRT_PATH);
+
+                    } else if(pixelAtual == 0xFF1407FF) {
                         //Player
                         tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FLOOR_1);
+                        Main.player.setX(xx*16);
+                        Main.player.setY(yy*16);
 
-                    } else {
-                        //chão
+                    }else if(pixelAtual == 0xFF4800FF) {
+                        //Municao
+
+
+                    }else if(pixelAtual == 0xFFFF8800) {
+                        //Vida
+                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FLOOR_1);
+
+                    }else if(pixelAtual == 0xFFFF7F7F) {
+                        //inimigo
                         tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FLOOR_1);
 
                     }
-
                 }
             }
 
