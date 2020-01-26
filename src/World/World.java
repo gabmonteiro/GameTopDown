@@ -3,6 +3,7 @@ package World;
 import Entities.Ammo;
 import Entities.Enemy;
 import Entities.Entity;
+import Entities.Vida;
 import com.teste.main.Main;
 
 import javax.imageio.ImageIO;
@@ -83,15 +84,15 @@ public class World {
 
                     }else if(pixelAtual == 0xFF4800FF) {
                         //Municao
-
+                        Main.entities.add(new Ammo(xx*16, yy*16, 16, 16, Entity.AMMO_EN));
 
                     }else if(pixelAtual == 0xFFFF8800) {
                         //Vida
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FLOOR_1);
+                        Main.entities.add(new Vida(xx*16, yy*16, 16, 16, Entity.LIFE_EN));
 
                     }else if(pixelAtual == 0xFFFF7F7F) {
                         //inimigo
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FLOOR_1);
+                        Main.entities.add(new Enemy(xx*16, yy*16, 16, 16, Entity.ENEMY_EN));
 
                     }
                 }
