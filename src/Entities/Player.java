@@ -1,6 +1,7 @@
 package Entities;
 
-import com.teste.main.Main;
+import World.Camera;
+import main.Main;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -10,7 +11,7 @@ public class Player extends Entity {
     public boolean left,right,up,down;
     private int direcaoRight = 0,direcaoLeft = 1,direcaoUp = 2, direcaoDown =  3;
     private int direcao = direcaoUp;
-    public double speed = 2.0;
+    public int speed = 1;
 
     private int frames = 0, maxFrames = 5, index = 0, maxIndex = 4;
     private boolean moved;
@@ -44,28 +45,28 @@ public class Player extends Entity {
 
 
     public void moveCima() {
-        int result = (int) (getY() - speed);
+        int result = (getY() - speed);
         setY(result);
         direcao = direcaoUp;
         moved = true;
     }
 
     public void moveBaixo() {
-        int result = (int) (getY() + speed);
+        int result = (getY() + speed);
         setY(result);
         direcao = direcaoDown;
         moved = true;
     }
 
     public void moveEsquerda() {
-        int result = (int) (getX() - speed);
+        int result = (getX() - speed);
         setX(result);
         direcao = direcaoLeft;
         moved = true;
     }
 
     public void moveDireita() {
-        int result = (int) (getX() + speed);
+        int result = (getX() + speed);
         setX(result);
         direcao = direcaoRight;
         moved = true;
@@ -89,28 +90,31 @@ public class Player extends Entity {
                     index = 0;
             }
         }
+
+        Camera.x = this.getX() - (Main.WIDTH/2);
+        Camera.y = this.getY() - (Main.HEIGHT/2);
     }
 
     public void render(Graphics g) {
          if(direcao == direcaoUp) {
-            g.drawImage(upPlayer[index], this.getX(), this.getY(), null);
+            g.drawImage(upPlayer[index], this.getX() - Camera.x, this.getY() - Camera.y, null);
         }else if(direcao == direcaoDown) {
-            g.drawImage(downPlayer[index], this.getX(), this.getY(), null);
+            g.drawImage(downPlayer[index], this.getX() - Camera.x, this.getY() - Camera.y, null);
         }else if(direcao == direcaoRight) {
-            g.drawImage(rightPlayer[index], this.getX(), this.getY(), null);
+            g.drawImage(rightPlayer[index], this.getX() - Camera.x, this.getY() - Camera.y, null);
         }else if(direcao == direcaoLeft) {
-            g.drawImage(leftPlayer[index], this.getX(), this.getY(), null);
+            g.drawImage(leftPlayer[index], this.getX() - Camera.x, this.getY() - Camera.y, null);
         }
 
          if(moved == false) {
              if(direcao == direcaoRight) {
-                 g.drawImage(rightPlayer[0], this.getX(), this.getY(), null);
+                 g.drawImage(rightPlayer[0], this.getX() - Camera.x, this.getY() - Camera.y, null);
              }else if(direcao == direcaoLeft) {
-                 g.drawImage(leftPlayer[0], this.getX(), this.getY(), null);
+                 g.drawImage(leftPlayer[0], this.getX() - Camera.x, this.getY() - Camera.y, null);
              }else if(direcao == direcaoUp) {
-                 g.drawImage(upPlayer[0], this.getX(), this.getY(), null);
+                 g.drawImage(upPlayer[0], this.getX() - Camera.x, this.getY() - Camera.y, null);
              }else if(direcao == direcaoDown) {
-                 g.drawImage(downPlayer[0], this.getX(), this.getY(), null);
+                 g.drawImage(downPlayer[0], this.getX() - Camera.x, this.getY() - Camera.y, null);
              }
          }
     }

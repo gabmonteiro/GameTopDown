@@ -4,7 +4,7 @@ import Entities.Ammo;
 import Entities.Enemy;
 import Entities.Entity;
 import Entities.Vida;
-import com.teste.main.Main;
+import main.Main;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -104,8 +104,16 @@ public class World {
     }
 
     public void render(Graphics g) {
-        for(int xx = 0; xx < WIDTH; xx++) {
-            for(int yy = 0; yy < HEIGHT; yy++) {
+        int xStart = Camera.x>>4;
+        int yStart = Camera.y>>4;
+
+        int xFinal = xStart + (Main.WIDTH >> 4);
+        int yFinal = yStart + (Main.HEIGHT >> 4);
+
+        for(int xx = xStart; xx <= xFinal; xx++) {
+            for(int yy = yStart; yy <= yFinal; yy++) {
+                if(xx < 0 || yy < 0 || xx >= Main.WIDTH || yy >= Main.HEIGHT)
+                    continue;
                 Tile tile = tiles[xx + (yy * WIDTH)];
                 tile.render(g);
             }

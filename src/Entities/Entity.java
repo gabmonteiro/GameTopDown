@@ -1,6 +1,7 @@
 package Entities;
 
-import com.teste.main.Main;
+import World.Camera;
+import main.Main;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -53,6 +54,6 @@ public class Entity {
     }
 
     public void render(Graphics g) {
-        g.drawImage(sprite, getX(), getY(), null);
+        g.drawImage(sprite, getX() - Camera.x, getY() - Camera.y, null);
     }
 }
