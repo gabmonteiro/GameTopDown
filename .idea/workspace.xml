@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33fbb1dd-b461-4e0e-93c1-6cc2cb811070" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/World/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/com/teste/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="33fbb1dd-b461-4e0e-93c1-6cc2cb811070" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +22,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -51,22 +37,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="Jogo Top_Down" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.teste.main.Main" />
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="Jogo Top_Down" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -74,22 +47,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -105,6 +65,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="134" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587178974739">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="134" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1587178974739" />
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1579055605886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -129,37 +93,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582330054445" />
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1582909769032">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1339" height="253" key="GridCell.Tab.0.bottom" timestamp="1587183960729">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state width="1339" height="253" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1587183960729" />
     <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582909769032" />
-    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1582909769032">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1339" height="253" key="GridCell.Tab.0.center" timestamp="1587183960729">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state width="1339" height="253" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1587183960729" />
     <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582909769032" />
-    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1582909769032">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1339" height="253" key="GridCell.Tab.0.left" timestamp="1587183960729">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state width="1339" height="253" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1587183960729" />
     <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582909769032" />
-    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1582909769032">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1339" height="253" key="GridCell.Tab.0.right" timestamp="1587183960729">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state width="1339" height="253" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1587183960729" />
     <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582909769032" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582827434718">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1339" height="253" key="GridCell.Tab.1.bottom" timestamp="1587183960587">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state width="1339" height="253" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1587183960587" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582827434718" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582827434718">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1339" height="253" key="GridCell.Tab.1.center" timestamp="1587183960587">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state width="1339" height="253" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1587183960587" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582827434718" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582827434718">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1339" height="253" key="GridCell.Tab.1.left" timestamp="1587183960587">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state width="1339" height="253" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1587183960587" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582827434718" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582827434718">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1339" height="253" key="GridCell.Tab.1.right" timestamp="1587183960587">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state width="1339" height="253" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1587183960587" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582827434718" />
     <state x="440" y="93" key="SettingsEditor" timestamp="1579795906946">
       <screen x="0" y="0" width="1920" height="1040" />
