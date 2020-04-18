@@ -112,7 +112,7 @@ public class World {
 
         for(int xx = xStart; xx <= xFinal; xx++) {
             for(int yy = yStart; yy <= yFinal; yy++) {
-                if(xx < 0 || yy < 0 || xx >= Main.WIDTH || yy >= Main.HEIGHT)
+                if(xx < 0 || yy < 0 || xx >= World.WIDTH || yy >= World.HEIGHT)
                     continue;
                 Tile tile = tiles[xx + (yy * WIDTH)];
                 tile.render(g);
