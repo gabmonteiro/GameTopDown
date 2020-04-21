@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33fbb1dd-b461-4e0e-93c1-6cc2cb811070" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/World/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Entity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/Entities/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/Camera.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/World/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/com/teste/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jogo Top_Down/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jogo Top_Down/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
@@ -129,46 +126,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582330054445" />
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1582909769032">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1587492838468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582909769032" />
-    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1582909769032">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587492838468" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1587492838468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582909769032" />
-    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1582909769032">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587492838468" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1587492838468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582909769032" />
-    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1582909769032">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587492838468" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1587492838468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582909769032" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582827434718">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587492838468" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1587492841640">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582827434718" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582827434718">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587492841640" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1587492841640">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582827434718" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582827434718">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587492841640" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1587492841640">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582827434718" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582827434718">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587492841640" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1587492841640">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582827434718" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587492841640" />
     <state x="440" y="93" key="SettingsEditor" timestamp="1579795906946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="93" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579795906946" />
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1582906794128">
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1587492496551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582906794128" />
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587492496551" />
     <state x="342" y="139" key="new project wizard" timestamp="1582132332358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -177,5 +174,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582827199349" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/World/World.java</url>
+          <line>106</line>
+          <properties class="World.World" method="isFree">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,6 +1,7 @@
 package Entities;
 
 import World.Camera;
+import World.World;
 import main.Main;
 
 import java.awt.*;
@@ -75,10 +76,10 @@ public class Player extends Entity {
 
     public void tick() {
         moved = false;
-        if(up) moveCima();
-        if(down) moveBaixo();
-    if(left) moveEsquerda();
-    if(right) moveDireita();
+        if(up && World.isFree(getX(), getY()-speed)) moveCima();
+        if(down && World.isFree(getX(), getY()+speed)) moveBaixo();
+    if(left && World.isFree(getX()-speed, getY())) moveEsquerda();
+    if(right && World.isFree(getX()+speed, getY())) moveDireita();
 
 
         if(moved) {
@@ -91,9 +92,10 @@ public class Player extends Entity {
             }
         }
 
-        Camera.x = this.getX() - (Main.WIDTH/2);
-        Camera.y = this.getY() - (Main.HEIGHT/2);
+        Camera.x = Camera.Clamp(this.getX() - (Main.WIDTH/2), 0, World.WIDTH*16 - Main.WIDTH);
+        Camera.y = Camera.Clamp(this.getY() - (Main.HEIGHT/2), 0, World.HEIGHT*16 - Main.HEIGHT);
     }
+
 
     public void render(Graphics g) {
          if(direcao == direcaoUp) {
