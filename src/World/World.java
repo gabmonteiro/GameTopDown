@@ -117,7 +117,7 @@ public class World {
         int x4 = (xnext+TILE_SIZE-1) / TILE_SIZE;
         int y4 = (ynext+TILE_SIZE-1) / TILE_SIZE;
 
-        return tiles[x1 + (y1 * World.WIDTH)] instanceof WallTile ||
+         return tiles[x1 + (y1 * World.WIDTH)] instanceof WallTile ||
                 tiles[x2 + (y2 * World.WIDTH)] instanceof WallTile ||
                 tiles[x3 + (y3 * World.WIDTH)] instanceof WallTile ||
                 tiles[x4 + (y4 * World.WIDTH)] instanceof WallTile;
