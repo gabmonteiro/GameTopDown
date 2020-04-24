@@ -132,7 +132,11 @@ public class World {
 
         for(int xx = xStart; xx <= xFinal; xx++) {
             for(int yy = yStart; yy <= yFinal; yy++) {
+<<<<<<< HEAD
                 if(xx < 0 || yy < 0 || xx >= WIDTH || yy >= HEIGHT)
+=======
+                if(xx < 0 || yy < 0 || xx >= World.WIDTH || yy >= World.HEIGHT)
+>>>>>>> aa49cb96050e45c5ef12130b9f5e4fc8ed0b8936
                     continue;
                 Tile tile = tiles[xx + (yy * WIDTH)];
                 tile.render(g);

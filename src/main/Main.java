@@ -20,7 +20,11 @@ public class Main extends Canvas implements Runnable, KeyListener {
     public static JFrame frame;
     private Thread thread;
     private boolean isRunning;
+<<<<<<< HEAD
     public static final int WIDTH = 240;
+=======
+    public static final int WIDTH = 160;
+>>>>>>> aa49cb96050e45c5ef12130b9f5e4fc8ed0b8936
     public static final int HEIGHT = 160;
     public final int SCALE = 3;
 

@@ -4,7 +4,7 @@ import World.Camera;
 import World.World;
 import main.Main;
 
-import java.awt.*;
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 public class Player extends Entity {
@@ -42,6 +42,9 @@ public class Player extends Entity {
         for(int i = 0; i < 4; i++) {
             downPlayer[i] = Main.spriteSheet.getSprite(48 + (i*16), 48, 16, 16);
         }
+
+        Camera.x = 10;
+        Camera.y = 10;
     }
 
 
@@ -92,8 +95,21 @@ public class Player extends Entity {
             }
         }
 
+<<<<<<< HEAD
         Camera.x = Camera.Clamp(this.getX() - (Main.WIDTH/2), 0, World.WIDTH*16 - Main.WIDTH);
         Camera.y = Camera.Clamp(this.getY() - (Main.HEIGHT/2), 0, World.HEIGHT*16 - Main.HEIGHT);
+=======
+        int x = this.getX() - (Main.WIDTH / 2);
+
+        if ((x > 0 && Camera.x > 0) && (x < 160 && Camera.x < 160)) {
+            Camera.x = x;
+        }
+
+        int y = this.getY() - (Main.HEIGHT / 2);
+        if ((y > 0 && Camera.y > 0) && (y < 160 && Camera.y < 160)) {
+            Camera.y = y;
+        }
+>>>>>>> aa49cb96050e45c5ef12130b9f5e4fc8ed0b8936
     }
 
 
