@@ -43,8 +43,8 @@ public class Player extends Entity {
             downPlayer[i] = Main.spriteSheet.getSprite(48 + (i*16), 48, 16, 16);
         }
 
-        Camera.x = 10;
-        Camera.y = 10;
+        Camera.x = 1;
+        Camera.y = 1;
     }
 
 
