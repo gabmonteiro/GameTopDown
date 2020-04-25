@@ -13,8 +13,9 @@ import java.io.IOException;
 
 public class World {
 
-    private Tile[] tiles;
+    public static Tile[] tiles;
     public static int WIDTH, HEIGHT;
+    public static final int TILE_SIZE = 16;
 
 
     public World(String path) {
@@ -42,23 +43,23 @@ public class World {
 
                     }else if(pixelAtual == 0xFF278C00) {
                         //muro direita
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_RIGHT_WALL);
+                        tiles[xx + (yy * WIDTH)] = new WallTile(xx*16, yy*16, Tile.TILE_RIGHT_WALL);
 
                     }else if(pixelAtual == 0xFF2AFF00) {
                         //muro esquerda
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_LEFT_WALL);
+                        tiles[xx + (yy * WIDTH)] = new WallTile(xx*16, yy*16, Tile.TILE_LEFT_WALL);
 
                     }else if(pixelAtual == 0xFFFF1500) {
                         //muro de cima 1
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FRONT_WALL_1);
+                        tiles[xx + (yy * WIDTH)] = new WallTile(xx*16, yy*16, Tile.TILE_FRONT_WALL_1);
 
                     }else if(pixelAtual == 0xFFBC0C00) {
                         //muro de cima 2
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FRONT_WALL_2);
+                        tiles[xx + (yy * WIDTH)] = new WallTile(xx*16, yy*16, Tile.TILE_FRONT_WALL_2);
 
                     }else if(pixelAtual == 0xFF910900) {
                         //muro de cima 3
-                        tiles[xx + (yy * WIDTH)] = new FloorTile(xx*16, yy*16, Tile.TILE_FRONT_WALL_3);
+                        tiles[xx + (yy * WIDTH)] = new WallTile(xx*16, yy*16, Tile.TILE_FRONT_WALL_3);
 
                     }else if(pixelAtual == 0xFFFFD800) {
                         //arvores escuras
@@ -103,6 +104,25 @@ public class World {
         }
     }
 
+    public static boolean isFree(int xnext, int ynext) {
+        int x1 = xnext / TILE_SIZE;
+        int y1 = ynext / TILE_SIZE;
+
+        int x2 = (xnext+TILE_SIZE-1) / TILE_SIZE;
+        int y2 = ynext / TILE_SIZE;
+
+        int x3 = xnext / TILE_SIZE;
+        int y3 = (ynext+TILE_SIZE-1) / TILE_SIZE;
+
+        int x4 = (xnext+TILE_SIZE-1) / TILE_SIZE;
+        int y4 = (ynext+TILE_SIZE-1) / TILE_SIZE;
+
+         return !(tiles[x1 + (y1 * World.WIDTH)] instanceof WallTile ||
+                tiles[x2 + (y2 * World.WIDTH)] instanceof WallTile ||
+                tiles[x3 + (y3 * World.WIDTH)] instanceof WallTile ||
+                tiles[x4 + (y4 * World.WIDTH)] instanceof WallTile);
+    }
+
     public void render(Graphics g) {
         int xStart = Camera.x>>4;
         int yStart = Camera.y>>4;
@@ -112,7 +132,7 @@ public class World {
 
         for(int xx = xStart; xx <= xFinal; xx++) {
             for(int yy = yStart; yy <= yFinal; yy++) {
-                if(xx < 0 || yy < 0 || xx >= World.WIDTH || yy >= World.HEIGHT)
+                if(xx < 0 || yy < 0 || xx >= WIDTH || yy >= HEIGHT)
                     continue;
                 Tile tile = tiles[xx + (yy * WIDTH)];
                 tile.render(g);

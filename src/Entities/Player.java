@@ -1,6 +1,7 @@
 package Entities;
 
 import World.Camera;
+import World.World;
 import main.Main;
 
 import java.awt.Graphics;
@@ -78,10 +79,10 @@ public class Player extends Entity {
 
     public void tick() {
         moved = false;
-        if(up) moveCima();
-        if(down) moveBaixo();
-    if(left) moveEsquerda();
-    if(right) moveDireita();
+        if(up && World.isFree(getX(), getY()-speed)) moveCima();
+        if(down && World.isFree(getX(), getY()+speed)) moveBaixo();
+    if(left && World.isFree(getX()-speed, getY())) moveEsquerda();
+    if(right && World.isFree(getX()+speed, getY())) moveDireita();
 
 
         if(moved) {
@@ -105,6 +106,7 @@ public class Player extends Entity {
             Camera.y = y;
         }
     }
+
 
     public void render(Graphics g) {
          if(direcao == direcaoUp) {
