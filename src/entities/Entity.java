@@ -1,19 +1,12 @@
-package Entities;
+package entities;
 
-import World.Camera;
-import main.Main;
-
-import java.awt.*;
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-public class Entity {
+public abstract class Entity {
 
-    public static BufferedImage LIFE_EN = Main.spriteSheet.getSprite(112, 0, 16, 16);
-    public static BufferedImage AMMO_EN = Main.spriteSheet.getSprite(128, 0, 16, 16);
-    public static BufferedImage ENEMY_EN = Main.spriteSheet.getSprite(144, 0, 16, 16);
-
-    private double x;
-    private double y;
+    private int x;
+    private int y;
     private int width;
     private int height;
 
@@ -26,8 +19,6 @@ public class Entity {
         this.height = height;
         this.sprite = sprite;
     }
-
-
 
     public void setX(int newX) { this.x = newX; }
 
@@ -47,13 +38,7 @@ public class Entity {
         return height;
     }
 
+    abstract public void tick();
 
-
-    public void tick() {
-
-    }
-
-    public void render(Graphics g) {
-        g.drawImage(sprite, getX() - Camera.x, getY() - Camera.y, null);
-    }
+    abstract public void render(Graphics g);
 }

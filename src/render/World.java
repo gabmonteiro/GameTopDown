@@ -1,9 +1,9 @@
-package World;
+package render;
 
-import Entities.Ammo;
-import Entities.Enemy;
-import Entities.Entity;
-import Entities.Vida;
+import entities.Ammo;
+import entities.Enemy;
+import entities.Entity;
+import entities.Vida;
 import main.Main;
 
 import javax.imageio.ImageIO;
@@ -16,7 +16,6 @@ public class World {
     public static Tile[] tiles;
     public static int WIDTH, HEIGHT;
     public static final int TILE_SIZE = 16;
-
 
     public World(String path) {
         try {
@@ -85,15 +84,15 @@ public class World {
 
                     }else if(pixelAtual == 0xFF4800FF) {
                         //Municao
-                        Main.entities.add(new Ammo(xx*16, yy*16, 16, 16, Entity.AMMO_EN));
+                        Main.entities.add(new Ammo(xx*16, yy*16, 16, 16));
 
                     }else if(pixelAtual == 0xFFFF8800) {
                         //Vida
-                        Main.entities.add(new Vida(xx*16, yy*16, 16, 16, Entity.LIFE_EN));
+                        Main.entities.add(new Vida(xx*16, yy*16, 16, 16));
 
                     }else if(pixelAtual == 0xFFFF7F7F) {
                         //inimigo
-                        Main.entities.add(new Enemy(xx*16, yy*16, 16, 16, Entity.ENEMY_EN));
+                        Main.entities.add(new Enemy(xx*16, yy*16, 16, 16));
 
                     }
                 }
@@ -101,29 +100,6 @@ public class World {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    public static boolean isFree(int xnext, int ynext) {
-        int x1 = xnext / TILE_SIZE;
-        int y1 = ynext / TILE_SIZE;
-
-        int x2 = (xnext+TILE_SIZE-1) / TILE_SIZE;
-        int y2 = ynext / TILE_SIZE;
-
-        int x3 = xnext / TILE_SIZE;
-        int y3 = (ynext+TILE_SIZE-1) / TILE_SIZE;
-
-        int x4 = (xnext+TILE_SIZE-1) / TILE_SIZE;
-        int y4 = (ynext+TILE_SIZE-1) / TILE_SIZE;
-
-        try {
-            return !(tiles[x1 + (y1 * World.WIDTH)] instanceof WallTile ||
-                    tiles[x2 + (y2 * World.WIDTH)] instanceof WallTile ||
-                    tiles[x3 + (y3 * World.WIDTH)] instanceof WallTile ||
-                    tiles[x4 + (y4 * World.WIDTH)] instanceof WallTile);
-        } catch (Exception ex) {
-            return false;
         }
     }
 
