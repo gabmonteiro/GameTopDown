@@ -1,18 +1,24 @@
 package main;
 
-import Entities.Entity;
-import Entities.Player;
-import SpriteSheet.SpriteSheet;
-import World.World;
+import entities.Entity;
+import entities.Player;
+import render.Camera;
+import render.World;
+import util.SpriteSheet;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
+
+import static render.World.TILE_SIZE;
 
 public class Main extends Canvas implements Runnable, KeyListener {
 
@@ -34,20 +40,20 @@ public class Main extends Canvas implements Runnable, KeyListener {
 
     public static World world;
 
-    public Main() {
+    private Main() {
         addKeyListener(this);
         setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
         initFrame();
         //inicializando objetos.
         image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
-        entities = new ArrayList<Entity>();
+        entities = new ArrayList<>();
         spriteSheet = new SpriteSheet("/SpriteSheet.png");
-        player = new Player(0, 0, 16, 16,spriteSheet.getSprite(48, 0,16,16));
+        player = new Player(0, 0, 16, 16, spriteSheet.getSprite(48, 0,16,16));
         entities.add(player);
         world = new World("/TileMap.png");
     }
 
-    public void initFrame() {
+    private void initFrame() {
         frame = new JFrame("Game");
         frame.add(this);
         frame.setResizable(false);
@@ -58,7 +64,7 @@ public class Main extends Canvas implements Runnable, KeyListener {
 
     }
 
-    public synchronized void start() {
+    private synchronized void start() {
         thread = new Thread(this);
         isRunning = true;
         thread.start();
@@ -74,26 +80,21 @@ public class Main extends Canvas implements Runnable, KeyListener {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
-
-
 
     public static void main(String[] args) {
         Main main = new Main();
         main.start();
     }
 
-
-
-    public void tick() {
+    private void tick() {
         for(int i = 0; i < entities.size(); i++) {
             Entity e = entities.get(i);
             e.tick();
         }
     }
 
-    public void render() {
+    private void render() {
         BufferStrategy bs = this.getBufferStrategy();
         if(bs == null) {
             this.createBufferStrategy(3);
@@ -115,6 +116,7 @@ public class Main extends Canvas implements Runnable, KeyListener {
         bs.show();
     }
 
+    @Override
     public void run() {
         long lastTime = System.nanoTime();
         double amountOfTicks = 60.0;
@@ -123,16 +125,17 @@ public class Main extends Canvas implements Runnable, KeyListener {
         int frames = 0;
         double timer = System.currentTimeMillis();
 
+        requestFocus();
+
         while(isRunning) {
-            requestFocus();
             long now = System.nanoTime();
             delta+= (now - lastTime) / ns;
             lastTime = now;
 
-
             if(delta >= 1) {
                 tick();
                 render();
+                Camera.moveCamera(player.getX(), player.getY());
                 frames++;
                 delta--;
             }
@@ -141,20 +144,17 @@ public class Main extends Canvas implements Runnable, KeyListener {
                 System.out.println("FPS: "+ frames);
                 frames = 0;
                 timer+=1000;
-
             }
 
         }
         stop();
     }
 
-
-
+    @Override
     public void keyTyped(KeyEvent e) {
-
     }
 
-
+    @Override
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == KeyEvent.VK_RIGHT || e.getKeyCode() == KeyEvent.VK_D) {
             player.right = true;
@@ -169,7 +169,7 @@ public class Main extends Canvas implements Runnable, KeyListener {
         }
     }
 
-
+    @Override
     public void keyReleased(KeyEvent e) {
         if(e.getKeyCode() == KeyEvent.VK_RIGHT || e.getKeyCode() == KeyEvent.VK_D) {
             player.right = false;
