@@ -1,9 +1,9 @@
 package main;
 
-import entities.Entity;
 import entities.Player;
 import render.Camera;
-import render.World;
+import render.RenderableObject;
+import render.WalkingObject;
 import util.SpriteSheet;
 
 import javax.swing.JFrame;
@@ -18,8 +18,6 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
-import static render.World.TILE_SIZE;
-
 public class Main extends Canvas implements Runnable, KeyListener {
 
     private static final long serialVersionUID = 1L;
@@ -29,26 +27,22 @@ public class Main extends Canvas implements Runnable, KeyListener {
 
     public static final int WIDTH = 160;
     public static final int HEIGHT = 160;
-    public final int SCALE = 3;
+    private final int SCALE = 3;
 
-
-    private BufferedImage image;
-
-    public static List<Entity> entities;
+    public static List<RenderableObject> entities;
     public static SpriteSheet spriteSheet;
     public static Player player;
 
-    public static World world;
+    private static World world;
 
     private Main() {
         addKeyListener(this);
         setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
         initFrame();
         //inicializando objetos.
-        image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         entities = new ArrayList<>();
         spriteSheet = new SpriteSheet("/SpriteSheet.png");
-        player = new Player(0, 0, 16, 16, spriteSheet.getSprite(48, 0,16,16));
+        player = new Player(0, 0, 16, 16);
         entities.add(player);
         world = new World("/TileMap.png");
     }
@@ -87,10 +81,13 @@ public class Main extends Canvas implements Runnable, KeyListener {
         main.start();
     }
 
-    private void tick() {
+    private void move() {
         for(int i = 0; i < entities.size(); i++) {
-            Entity e = entities.get(i);
-            e.tick();
+            RenderableObject renderableObject = entities.get(i);
+            if (renderableObject instanceof WalkingObject) {
+                WalkingObject walkingObject = (WalkingObject) renderableObject;
+                walkingObject.move();
+            }
         }
     }
 
@@ -100,6 +97,7 @@ public class Main extends Canvas implements Runnable, KeyListener {
             this.createBufferStrategy(3);
             return;
         }
+        BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         Graphics g = image.getGraphics();
         g.setColor(Color.black);
         g.fillRect(0,0, WIDTH, HEIGHT);
@@ -107,8 +105,8 @@ public class Main extends Canvas implements Runnable, KeyListener {
         world.render(g);
 
         for(int i = 0; i < entities.size(); i++) {
-            Entity e = entities.get(i);
-            e.render(g);
+            RenderableObject renderableObject = entities.get(i);
+            renderableObject.render(g);
         }
 
         g = bs.getDrawGraphics();
@@ -133,7 +131,7 @@ public class Main extends Canvas implements Runnable, KeyListener {
             lastTime = now;
 
             if(delta >= 1) {
-                tick();
+                move();
                 render();
                 Camera.moveCamera(player.getX(), player.getY());
                 frames++;

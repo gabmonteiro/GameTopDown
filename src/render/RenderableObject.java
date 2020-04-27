@@ -1,9 +1,9 @@
-package entities;
+package render;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-public abstract class Entity {
+public abstract class RenderableObject {
 
     private int x;
     private int y;
@@ -12,7 +12,7 @@ public abstract class Entity {
 
     private BufferedImage sprite;
 
-    public Entity(int x, int y, int width, int height, BufferedImage sprite) {
+    public RenderableObject(int x, int y, int width, int height, BufferedImage sprite) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -38,7 +38,9 @@ public abstract class Entity {
         return height;
     }
 
-    abstract public void tick();
+    protected BufferedImage getSprite() {
+        return sprite;
+    }
 
     abstract public void render(Graphics g);
 }

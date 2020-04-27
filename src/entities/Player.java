@@ -1,19 +1,18 @@
 package entities;
 
 import main.Main;
-import render.Camera;
-import render.WallTile;
-import render.World;
+import main.World;
+import render.*;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import static render.World.TILE_SIZE;
-import static render.World.tiles;
+import static main.World.TILE_SIZE;
+import static main.World.tiles;
 
-public class Player extends Entity {
+public class Player extends RenderableObject implements WalkingObject {
 
-    public boolean left,right,up,down;
+    public boolean left, right, up, down;
 
     private enum Direction {
         LEFT, RIGHT, UP, DOWN
@@ -29,8 +28,8 @@ public class Player extends Entity {
     private BufferedImage[] spriteMoveUp;
     private BufferedImage[] spriteMoveDown;
 
-    public Player(int x, int y, int width, int height, BufferedImage sprite) {
-        super(x, y, width, height, sprite);
+    public Player(int x, int y, int width, int height) {
+        super(x, y, width, height, Main.spriteSheet.getSprite(48, 0,16,16));
 
         spriteMoveRight = new BufferedImage[4];
         spriteMoveLeft = new BufferedImage[4];
@@ -50,7 +49,6 @@ public class Player extends Entity {
             spriteMoveDown[i] = Main.spriteSheet.getSprite(48 + (i*16), 48, 16, 16);
         }
     }
-
 
     public void moveCima() {
         setY(getY() - speed);
@@ -77,7 +75,7 @@ public class Player extends Entity {
     }
 
     @Override
-    public void tick() {
+    public void move() {
         isMoving = false;
 
         if(up && canMove(getX(), getY()-speed)) moveCima();
@@ -110,10 +108,10 @@ public class Player extends Entity {
         int y4 = (ynext+TILE_SIZE-1) / TILE_SIZE;
 
         try {
-            return !(tiles[x1 + (y1 * World.WIDTH)] instanceof WallTile ||
-                    tiles[x2 + (y2 * World.WIDTH)] instanceof WallTile ||
-                    tiles[x3 + (y3 * World.WIDTH)] instanceof WallTile ||
-                    tiles[x4 + (y4 * World.WIDTH)] instanceof WallTile);
+            return !(tiles[x1 + (y1 * World.WIDTH)] instanceof CollisionObject ||
+                    tiles[x2 + (y2 * World.WIDTH)] instanceof CollisionObject ||
+                    tiles[x3 + (y3 * World.WIDTH)] instanceof CollisionObject ||
+                    tiles[x4 + (y4 * World.WIDTH)] instanceof CollisionObject);
         } catch (Exception ex) {
             return false;
         }
