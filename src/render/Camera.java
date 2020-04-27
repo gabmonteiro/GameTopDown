@@ -1,8 +1,9 @@
 package render;
 
 import main.Main;
+import main.World;
 
-import static render.World.TILE_SIZE;
+import static main.World.TILE_SIZE;
 
 public class Camera {
     public static int x;

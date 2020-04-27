@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class SpriteSheet {
 
-    private BufferedImage spritesheet;
+    private static BufferedImage spritesheet;
 
     public SpriteSheet(String path) {
         try {
