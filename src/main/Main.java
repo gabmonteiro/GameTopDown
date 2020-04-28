@@ -1,5 +1,6 @@
 package main;
 
+import entities.Enemy;
 import entities.Entity;
 import entities.Player;
 import render.Camera;

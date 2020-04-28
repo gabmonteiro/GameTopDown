@@ -1,6 +1,7 @@
 package entities;
 
 import main.Main;
+import render.Camera;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -20,6 +21,6 @@ public class Enemy extends Entity {
 
     @Override
     public void render(Graphics g) {
-
+        g.drawImage(sprite, getX() - Camera.x, getY() - Camera.y, null);
     }
 }
