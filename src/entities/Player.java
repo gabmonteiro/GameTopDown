@@ -21,7 +21,7 @@ public class Player extends Entity {
     }
 
     private Direction direction = Direction.DOWN;
-    private int speed = 1;
+    private double speed = 3;
     private int index = 0, frames = 0;
     private final int maxIndex = 4, maxFrames = 5;
     private boolean isMoving;
@@ -81,10 +81,10 @@ public class Player extends Entity {
     public void tick() {
         isMoving = false;
 
-        if(up && Colissions.canMove(getX(), getY()-speed)) moveCima();
-        if(down && Colissions.canMove(getX(), getY()+speed)) moveBaixo();
-        if(left && Colissions.canMove(getX()-speed, getY())) moveEsquerda();
-        if(right && Colissions.canMove(getX()+speed, getY())) moveDireita();
+        if(up && Colissions.canMove(getX(), getY()-(int)speed)) moveCima();
+        if(down && Colissions.canMove(getX(), getY()+(int)speed)) moveBaixo();
+        if(left && Colissions.canMove(getX()-(int)speed, getY())) moveEsquerda();
+        if(right && Colissions.canMove(getX()+(int)speed, getY())) moveDireita();
 
         if(isMoving) {
             frames++;

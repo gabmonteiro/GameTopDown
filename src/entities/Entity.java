@@ -5,8 +5,8 @@ import java.awt.image.BufferedImage;
 
 public abstract class Entity {
 
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private int width;
     private int height;
 
@@ -20,9 +20,9 @@ public abstract class Entity {
         this.sprite = sprite;
     }
 
-    public void setX(int newX) { this.x = newX; }
+    public void setX(double newX) { this.x = newX; }
 
-    public void setY(int newY) { this.y = newY; }
+    public void setY(double newY) { this.y = newY; }
 
     public int getX() { return (int) x; }
 
